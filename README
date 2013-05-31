@@ -1,0 +1,6 @@
+This module is for taking a text file and parsing it into html using some 
+simple rules and parsing code.
+
+It can be used for things like translating a word doc into an html doc (via
+converting the word doc into a text file first), for purposes such as creating
+Terms of Use or Privacy Policies.
