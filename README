@@ -28,3 +28,5 @@ complete with its attenuant tags.
 The module serves its main purpose of saving time marking up long text docs,
 but it assumes there will still be a human eye verifying markup is correct
 before anything is sent to a production server.
+
+THIS MODULE WAS BUILT IN PYTHON 3.2.
