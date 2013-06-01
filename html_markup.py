@@ -19,9 +19,14 @@ print("<!doctype html>")
 print("<html><title></title><body>")
 
 infile = sys.stdin
+first = True
 for block in get_block(infile):
     if Title().find_pattern(block):
-        print(Parser('title').markup('tag', block))
+        if first:
+            element = 'first_title'
+            first = False
+        else: element = 'title'
+        print(Parser(element).markup('tag', block))
     elif List().find_pattern(block):
         print(Parser('list').markup('tag', block))
     else:

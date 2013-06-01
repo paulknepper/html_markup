@@ -15,12 +15,14 @@ class Parser:
     
     def start_tag(self, text):
         bold = "<strong>" if text.isupper() else ''
-        if self.element == 'title': return '<h1>{}'.format(bold)+text
+        if self.element == 'first_title': return '<h1>{}'.format(bold)+text
+        if self.element == 'title': return '<h3>{}'.format(bold)+text
         if self.element == 'paragraph': return '<p>{}'.format(bold)+text
         if self.element == 'list': return '<li>{}'.format(bold)+text
 
     def end_tag(self, text):
         bold = "</strong>" if text.isupper() else ''
-        if self.element == 'title': return '{}</h1>'.format(bold)
+        if self.element == 'first_title': return '{}</h1>'.format(bold)
+        if self.element == 'title': return '{}</h3>'.format(bold)
         if self.element == 'paragraph': return '{}</p>'.format(bold)
         if self.element == 'list': return '{}</li>'.format(bold)
