@@ -4,3 +4,27 @@ simple rules and parsing code.
 It can be used for things like translating a word doc into an html doc (via
 converting the word doc into a text file first), for purposes such as creating
 Terms of Use or Privacy Policies.
+
+It is extremely basic for the time being, and some of the rules are a bit 
+contrived (for instance, to be tagged as a standalone element there MUST be
+an empty line of space between text.  In other words,
+
+| My List
+| 1. Pizza
+| 2. Dessert
+
+will all show up as one <p> block under the current code.  To properly make
+'My List' a header and the list items <li>, you must input:
+
+| My List
+|
+| 1. Pizza
+|
+| 2. Dessert
+
+Leaving a blank line of space tells the parser to begin a new text block, 
+complete with its attenuant tags.
+
+The module serves its main purpose of saving time marking up long text docs,
+but it assumes there will still be a human eye verifying markup is correct
+before anything is sent to a production server.

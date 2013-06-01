@@ -8,6 +8,9 @@ class Rules:
         if self.pattern.match(text): return True
     
 class Title(Rules):
-    pattern = re.compile(r'^(\w ?){1,5}$')
+    pattern = re.compile(r'^(\b\w+\b[ \t\f\v]{0,2}){1,5}$')
+
+class List(Rules):
+    pattern = re.compile(r'^(\d{1,2}\.?)|(\- ?)[ \t\f\v]{0,2}.*?$')
 
 

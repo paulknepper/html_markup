@@ -10,6 +10,18 @@ start of a new paragraph.  Thus, text will have to be chunked into blocks based
 on whether or not there are two consecutive newlines, which would likely
 indicate the start of a new paragraph.
 
+A gratuitous List
+
+Here's a list of things I like to eat:
+
+1. Pasta
+
+2. Pizza
+
+3. Burritos
+
+4. Dessert!
+
 Conclusion
 
 In conclusion, let's fire this baby up and see what happens...
